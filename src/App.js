@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import search from "./img/search.svg";
 import download from "./img/download.svg";
+import bg from "./img/bg.jpg";
 
 const accessKey = `?client_id=${process.env.REACT_APP_ACCESS_KEY}`;
 
@@ -135,7 +136,8 @@ const AppStyled = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url("./bg.jpg");
+    /* background-image: url("./bg.jpg"); */
+    background-image: url(${bg});
 
     margin-bottom: 5rem;
 
@@ -228,6 +230,9 @@ const AppStyled = styled.div`
           width: 28px;
         }
       }
+    }
+    @media screen and (max-width: 852px) {
+      width: 100%;
     }
   }
 `;
